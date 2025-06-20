@@ -48,7 +48,7 @@ export const BackgroundGradientAnimation = ({
   }, []);
 
   useEffect(() => {
-    if (!mounted || typeof document === "undefined") return;
+    if (!mounted || typeof window === "undefined") return;
 
     document.body.style.setProperty("--gradient-background-start", gradientBackgroundStart);
     document.body.style.setProperty("--gradient-background-end", gradientBackgroundEnd);
